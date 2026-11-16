@@ -1,0 +1,2647 @@
+[
+  {
+    "id": 1,
+    "word": "chaos",
+    "bangla": "বিশৃঙ্খলা, অরাজকতা",
+    "synonyms": [
+      "disorder",
+      "mayhem"
+    ]
+  },
+  {
+    "id": 2,
+    "word": "tended to",
+    "bangla": "প্রবণ হওয়া, ঝোঁক থাকা",
+    "synonyms": [
+      "were inclined to",
+      "leaned towards"
+    ]
+  },
+  {
+    "id": 3,
+    "word": "convey",
+    "bangla": "জানানো, পৌঁছে দেওয়া",
+    "synonyms": [
+      "express",
+      "communicate"
+    ]
+  },
+  {
+    "id": 4,
+    "word": "circumscribe",
+    "bangla": "সীমাবদ্ধ করা",
+    "synonyms": [
+      "restrict",
+      "limit"
+    ]
+  },
+  {
+    "id": 5,
+    "word": "intensely",
+    "bangla": "তীব্রভাবে",
+    "synonyms": [
+      "fiercely",
+      "deeply"
+    ]
+  },
+  {
+    "id": 6,
+    "word": "precedent",
+    "bangla": "পূর্ব-দৃষ্টান্ত",
+    "synonyms": [
+      "example",
+      "model"
+    ]
+  },
+  {
+    "id": 7,
+    "word": "rivalled",
+    "bangla": "সমকক্ষ হওয়া, প্রতিদ্বন্দ্বিতা করা",
+    "synonyms": [
+      "matched",
+      "competed with"
+    ]
+  },
+  {
+    "id": 8,
+    "word": "perpetual",
+    "bangla": "চিরস্থায়ী, অবিরাম",
+    "synonyms": [
+      "endless",
+      "constant"
+    ]
+  },
+  {
+    "id": 9,
+    "word": "patronage",
+    "bangla": "পৃষ্ঠপোষকতা",
+    "synonyms": [
+      "support",
+      "sponsorship"
+    ]
+  },
+  {
+    "id": 10,
+    "word": "obscurities",
+    "bangla": "দুর্বোধ্যতা, অস্পষ্ট বিষয়",
+    "synonyms": [
+      "vagueness",
+      "unclear points"
+    ]
+  },
+  {
+    "id": 11,
+    "word": "bowers",
+    "bangla": "কুঞ্জ, লতাকুঞ্জ",
+    "synonyms": [
+      "arbours",
+      "shady nooks"
+    ]
+  },
+  {
+    "id": 12,
+    "word": "eccentricities",
+    "bangla": "অদ্ভুত আচরণ",
+    "synonyms": [
+      "oddities",
+      "quirks"
+    ]
+  },
+  {
+    "id": 13,
+    "word": "ascertaining",
+    "bangla": "নিশ্চিত হওয়া, যাচাই করা",
+    "synonyms": [
+      "finding out",
+      "verifying"
+    ]
+  },
+  {
+    "id": 14,
+    "word": "cornerstone",
+    "bangla": "ভিত্তিপ্রস্তর, মূল ভিত্তি",
+    "synonyms": [
+      "foundation",
+      "basis"
+    ]
+  },
+  {
+    "id": 15,
+    "word": "prevail / prevailing",
+    "bangla": "জয়ী হওয়া; প্রচলিত থাকা",
+    "synonyms": [
+      "win",
+      "dominate"
+    ]
+  },
+  {
+    "id": 16,
+    "word": "fascinating",
+    "bangla": "মনোমুগ্ধকর",
+    "synonyms": [
+      "captivating",
+      "charming"
+    ]
+  },
+  {
+    "id": 17,
+    "word": "distaste",
+    "bangla": "অপছন্দ, বিতৃষ্ণা",
+    "synonyms": [
+      "dislike",
+      "aversion"
+    ]
+  },
+  {
+    "id": 18,
+    "word": "severity",
+    "bangla": "কঠোরতা, তীব্রতা",
+    "synonyms": [
+      "harshness",
+      "intensity"
+    ]
+  },
+  {
+    "id": 19,
+    "word": "scream / screams / screamed",
+    "bangla": "চিৎকার",
+    "synonyms": [
+      "shrieks",
+      "yells"
+    ]
+  },
+  {
+    "id": 20,
+    "word": "writhings",
+    "bangla": "ছটফট করা, মোচড়ানো",
+    "synonyms": [
+      "twisting",
+      "squirming"
+    ]
+  },
+  {
+    "id": 21,
+    "word": "assortment",
+    "bangla": "নানা রকম সংগ্রহ",
+    "synonyms": [
+      "variety",
+      "mixture"
+    ]
+  },
+  {
+    "id": 22,
+    "word": "expletives",
+    "bangla": "গালি, অশ্লীল শব্দ",
+    "synonyms": [
+      "curses",
+      "swear words"
+    ]
+  },
+  {
+    "id": 23,
+    "word": "denouncing",
+    "bangla": "নিন্দা করা",
+    "synonyms": [
+      "condemning",
+      "criticising"
+    ]
+  },
+  {
+    "id": 24,
+    "word": "deliberately",
+    "bangla": "ইচ্ছাকৃতভাবে",
+    "synonyms": [
+      "intentionally",
+      "purposely"
+    ]
+  },
+  {
+    "id": 25,
+    "word": "reluctant",
+    "bangla": "অনিচ্ছুক",
+    "synonyms": [
+      "unwilling",
+      "hesitant"
+    ]
+  },
+  {
+    "id": 26,
+    "word": "revulsion",
+    "bangla": "ঘৃণা, বিতৃষ্ণা",
+    "synonyms": [
+      "disgust",
+      "loathing"
+    ]
+  },
+  {
+    "id": 27,
+    "word": "consensus",
+    "bangla": "সর্বসম্মতি, ঐকমত্য",
+    "synonyms": [
+      "agreement",
+      "unanimity"
+    ]
+  },
+  {
+    "id": 28,
+    "word": "lunatic",
+    "bangla": "পাগল",
+    "synonyms": [
+      "madman",
+      "maniac"
+    ]
+  },
+  {
+    "id": 29,
+    "word": "fringe",
+    "bangla": "প্রান্ত, কিনারা",
+    "synonyms": [
+      "edge",
+      "margin"
+    ]
+  },
+  {
+    "id": 30,
+    "word": "discrepancy",
+    "bangla": "অমিল, গরমিল",
+    "synonyms": [
+      "difference",
+      "inconsistency"
+    ]
+  },
+  {
+    "id": 31,
+    "word": "flustered",
+    "bangla": "বিচলিত, হকচকিত",
+    "synonyms": [
+      "confused",
+      "agitated"
+    ]
+  },
+  {
+    "id": 32,
+    "word": "inclination",
+    "bangla": "ঝোঁক, প্রবণতা",
+    "synonyms": [
+      "tendency",
+      "leaning"
+    ]
+  },
+  {
+    "id": 33,
+    "word": "remnant",
+    "bangla": "অবশিষ্টাংশ",
+    "synonyms": [
+      "remainder",
+      "leftover"
+    ]
+  },
+  {
+    "id": 34,
+    "word": "benevolent",
+    "bangla": "দয়ালু, হিতৈষী",
+    "synonyms": [
+      "kind",
+      "charitable"
+    ]
+  },
+  {
+    "id": 35,
+    "word": "pursuit",
+    "bangla": "অনুসরণ, সাধনা",
+    "synonyms": [
+      "chase",
+      "quest"
+    ]
+  },
+  {
+    "id": 36,
+    "word": "legitimacy",
+    "bangla": "বৈধতা",
+    "synonyms": [
+      "lawfulness",
+      "validity"
+    ]
+  },
+  {
+    "id": 37,
+    "word": "evokes",
+    "bangla": "জাগিয়ে তোলে",
+    "synonyms": [
+      "calls up",
+      "stirs"
+    ]
+  },
+  {
+    "id": 38,
+    "word": "surrendering",
+    "bangla": "আত্মসমর্পণ করা",
+    "synonyms": [
+      "giving up",
+      "yielding"
+    ]
+  },
+  {
+    "id": 39,
+    "word": "malevolent",
+    "bangla": "বিদ্বেষপূর্ণ, ক্ষতিকর",
+    "synonyms": [
+      "spiteful",
+      "evil"
+    ]
+  },
+  {
+    "id": 40,
+    "word": "plausible",
+    "bangla": "বিশ্বাসযোগ্য",
+    "synonyms": [
+      "believable",
+      "credible"
+    ]
+  },
+  {
+    "id": 41,
+    "word": "essence",
+    "bangla": "সারমর্ম, মূল সত্তা",
+    "synonyms": [
+      "core",
+      "nature"
+    ]
+  },
+  {
+    "id": 42,
+    "word": "dictates",
+    "bangla": "নির্দেশ দেয়",
+    "synonyms": [
+      "orders",
+      "commands"
+    ]
+  },
+  {
+    "id": 43,
+    "word": "abundant",
+    "bangla": "প্রচুর",
+    "synonyms": [
+      "plentiful",
+      "ample"
+    ]
+  },
+  {
+    "id": 44,
+    "word": "exaggerated",
+    "bangla": "অতিরঞ্জিত",
+    "synonyms": [
+      "overstated",
+      "inflated"
+    ]
+  },
+  {
+    "id": 45,
+    "word": "devastating",
+    "bangla": "বিধ্বংসী",
+    "synonyms": [
+      "destructive",
+      "ruinous"
+    ]
+  },
+  {
+    "id": 46,
+    "word": "disjunction",
+    "bangla": "বিচ্ছেদ, অসংযোগ",
+    "synonyms": [
+      "separation",
+      "disconnect"
+    ]
+  },
+  {
+    "id": 47,
+    "word": "lopsidedness",
+    "bangla": "একপেশে ভাব",
+    "synonyms": [
+      "imbalance",
+      "unevenness"
+    ]
+  },
+  {
+    "id": 48,
+    "word": "overstate",
+    "bangla": "বাড়িয়ে বলা",
+    "synonyms": [
+      "exaggerate",
+      "inflate"
+    ]
+  },
+  {
+    "id": 49,
+    "word": "entitled",
+    "bangla": "অধিকারী",
+    "synonyms": [
+      "eligible",
+      "qualified"
+    ]
+  },
+  {
+    "id": 50,
+    "word": "folk",
+    "bangla": "সাধারণ মানুষ",
+    "synonyms": [
+      "people",
+      "common people"
+    ]
+  },
+  {
+    "id": 51,
+    "word": "nevertheless",
+    "bangla": "তবুও",
+    "synonyms": [
+      "however",
+      "nonetheless"
+    ]
+  },
+  {
+    "id": 52,
+    "word": "lobby",
+    "bangla": "তদবির করা",
+    "synonyms": [
+      "campaign",
+      "pressure"
+    ]
+  },
+  {
+    "id": 53,
+    "word": "scepticism",
+    "bangla": "সন্দেহবাদ",
+    "synonyms": [
+      "doubt",
+      "disbelief"
+    ]
+  },
+  {
+    "id": 54,
+    "word": "altruistic",
+    "bangla": "পরার্থপর, নিঃস্বার্থ",
+    "synonyms": [
+      "selfless",
+      "unselfish"
+    ]
+  },
+  {
+    "id": 55,
+    "word": "impartial",
+    "bangla": "নিরপেক্ষ",
+    "synonyms": [
+      "neutral",
+      "unbiased"
+    ]
+  },
+  {
+    "id": 56,
+    "word": "distortions",
+    "bangla": "বিকৃতি",
+    "synonyms": [
+      "twisting",
+      "misrepresentation"
+    ]
+  },
+  {
+    "id": 57,
+    "word": "phenomenon",
+    "bangla": "ঘটনা, প্রপঞ্চ",
+    "synonyms": [
+      "occurrence",
+      "event"
+    ]
+  },
+  {
+    "id": 58,
+    "word": "wrecking",
+    "bangla": "ধ্বংস করা",
+    "synonyms": [
+      "ruining",
+      "destroying"
+    ]
+  },
+  {
+    "id": 59,
+    "word": "diminished",
+    "bangla": "হ্রাস পাওয়া",
+    "synonyms": [
+      "reduced",
+      "lessened"
+    ]
+  },
+  {
+    "id": 60,
+    "word": "meltwaters",
+    "bangla": "গলিত বরফের পানি",
+    "synonyms": [
+      "glacial runoff",
+      "thaw water"
+    ]
+  },
+  {
+    "id": 61,
+    "word": "intuition",
+    "bangla": "সহজাত বোধ",
+    "synonyms": [
+      "instinct",
+      "hunch"
+    ]
+  },
+  {
+    "id": 62,
+    "word": "drastic",
+    "bangla": "কঠোর, চরম",
+    "synonyms": [
+      "extreme",
+      "severe"
+    ]
+  },
+  {
+    "id": 63,
+    "word": "radically",
+    "bangla": "আমূলভাবে",
+    "synonyms": [
+      "fundamentally",
+      "completely"
+    ]
+  },
+  {
+    "id": 64,
+    "word": "optimistic",
+    "bangla": "আশাবাদী",
+    "synonyms": [
+      "hopeful",
+      "positive"
+    ]
+  },
+  {
+    "id": 65,
+    "word": "optimism",
+    "bangla": "আশাবাদ",
+    "synonyms": [
+      "hopefulness",
+      "positivity"
+    ]
+  },
+  {
+    "id": 66,
+    "word": "pessimistic",
+    "bangla": "নিরাশাবাদী",
+    "synonyms": [
+      "gloomy",
+      "negative"
+    ]
+  },
+  {
+    "id": 67,
+    "word": "enormous",
+    "bangla": "বিশাল",
+    "synonyms": [
+      "huge",
+      "massive"
+    ]
+  },
+  {
+    "id": 68,
+    "word": "constituents",
+    "bangla": "উপাদান; ভোটার",
+    "synonyms": [
+      "components",
+      "voters"
+    ]
+  },
+  {
+    "id": 69,
+    "word": "distinction",
+    "bangla": "পার্থক্য; বিশেষ মর্যাদা",
+    "synonyms": [
+      "difference",
+      "honour"
+    ]
+  },
+  {
+    "id": 70,
+    "word": "thermosetting",
+    "bangla": "তাপে শক্ত হয় এমন (প্লাস্টিক)",
+    "synonyms": [
+      "heat-hardening",
+      "heat-setting"
+    ]
+  },
+  {
+    "id": 71,
+    "word": "impetus",
+    "bangla": "প্রেরণা, গতিবেগ",
+    "synonyms": [
+      "momentum",
+      "drive"
+    ]
+  },
+  {
+    "id": 72,
+    "word": "immense",
+    "bangla": "অসীম, বিপুল",
+    "synonyms": [
+      "vast",
+      "enormous"
+    ]
+  },
+  {
+    "id": 73,
+    "word": "pragmatic",
+    "bangla": "বাস্তববাদী",
+    "synonyms": [
+      "practical",
+      "realistic"
+    ]
+  },
+  {
+    "id": 74,
+    "word": "dwindling",
+    "bangla": "ক্রমে কমে যাওয়া",
+    "synonyms": [
+      "shrinking",
+      "declining"
+    ]
+  },
+  {
+    "id": 75,
+    "word": "embarked",
+    "bangla": "যাত্রা শুরু করা",
+    "synonyms": [
+      "set out",
+      "began"
+    ]
+  },
+  {
+    "id": 76,
+    "word": "abandoned",
+    "bangla": "পরিত্যক্ত",
+    "synonyms": [
+      "deserted",
+      "left"
+    ]
+  },
+  {
+    "id": 77,
+    "word": "amassing",
+    "bangla": "জমানো, সঞ্চয় করা",
+    "synonyms": [
+      "accumulating",
+      "collecting"
+    ]
+  },
+  {
+    "id": 78,
+    "word": "malleable",
+    "bangla": "নমনীয়, পিটিয়ে আকার দেওয়া যায়",
+    "synonyms": [
+      "flexible",
+      "pliable"
+    ]
+  },
+  {
+    "id": 79,
+    "word": "shallow",
+    "bangla": "অগভীর",
+    "synonyms": [
+      "superficial",
+      "not deep"
+    ]
+  },
+  {
+    "id": 80,
+    "word": "asbestos",
+    "bangla": "অ্যাসবেস্টস (তাপনিরোধী খনিজ)",
+    "synonyms": [
+      "fireproof mineral"
+    ]
+  },
+  {
+    "id": 81,
+    "word": "extent",
+    "bangla": "পরিমাণ, বিস্তার",
+    "synonyms": [
+      "degree",
+      "range"
+    ]
+  },
+  {
+    "id": 82,
+    "word": "taper",
+    "bangla": "ক্রমশ সরু হওয়া",
+    "synonyms": [
+      "narrow",
+      "thin out"
+    ]
+  },
+  {
+    "id": 83,
+    "word": "disdain",
+    "bangla": "অবজ্ঞা",
+    "synonyms": [
+      "contempt",
+      "scorn"
+    ]
+  },
+  {
+    "id": 84,
+    "word": "unparalleled",
+    "bangla": "অতুলনীয়",
+    "synonyms": [
+      "unmatched",
+      "unrivalled"
+    ]
+  },
+  {
+    "id": 85,
+    "word": "relished",
+    "bangla": "উপভোগ করা",
+    "synonyms": [
+      "enjoyed",
+      "savoured"
+    ]
+  },
+  {
+    "id": 86,
+    "word": "dazzling",
+    "bangla": "চোখ ধাঁধানো",
+    "synonyms": [
+      "brilliant",
+      "glittering"
+    ]
+  },
+  {
+    "id": 87,
+    "word": "drab",
+    "bangla": "নীরস, ম্লান",
+    "synonyms": [
+      "dull",
+      "colourless"
+    ]
+  },
+  {
+    "id": 88,
+    "word": "despised",
+    "bangla": "ঘৃণা করা",
+    "synonyms": [
+      "hated",
+      "loathed"
+    ]
+  },
+  {
+    "id": 89,
+    "word": "tempting",
+    "bangla": "প্রলুব্ধকর",
+    "synonyms": [
+      "inviting",
+      "enticing"
+    ]
+  },
+  {
+    "id": 90,
+    "word": "pedigree",
+    "bangla": "বংশপরিচয়",
+    "synonyms": [
+      "ancestry",
+      "lineage"
+    ]
+  },
+  {
+    "id": 91,
+    "word": "ludicrousness",
+    "bangla": "হাস্যকর অবস্থা",
+    "synonyms": [
+      "absurdity",
+      "silliness"
+    ]
+  },
+  {
+    "id": 92,
+    "word": "incongruity",
+    "bangla": "অসঙ্গতি",
+    "synonyms": [
+      "mismatch",
+      "inconsistency"
+    ]
+  },
+  {
+    "id": 93,
+    "word": "punchline",
+    "bangla": "রসিকতার শেষ কথা",
+    "synonyms": [
+      "joke's ending",
+      "climax"
+    ]
+  },
+  {
+    "id": 94,
+    "word": "appeasement",
+    "bangla": "তুষ্টিকরণ, শান্ত করা",
+    "synonyms": [
+      "pacification",
+      "placating"
+    ]
+  },
+  {
+    "id": 95,
+    "word": "squeaks",
+    "bangla": "কিচকিচ শব্দ",
+    "synonyms": [
+      "chirps",
+      "peeps"
+    ]
+  },
+  {
+    "id": 96,
+    "word": "scuffles",
+    "bangla": "হাতাহাতি",
+    "synonyms": [
+      "fights",
+      "brawls"
+    ]
+  },
+  {
+    "id": 97,
+    "word": "panting",
+    "bangla": "হাঁপানো",
+    "synonyms": [
+      "gasping",
+      "puffing"
+    ]
+  },
+  {
+    "id": 98,
+    "word": "cognitive",
+    "bangla": "বোধ-সংক্রান্ত, জ্ঞানীয়",
+    "synonyms": [
+      "mental",
+      "intellectual"
+    ]
+  },
+  {
+    "id": 99,
+    "word": "comprehending",
+    "bangla": "বোঝা",
+    "synonyms": [
+      "understanding",
+      "grasping"
+    ]
+  },
+  {
+    "id": 100,
+    "word": "sprang",
+    "bangla": "লাফিয়ে ওঠা",
+    "synonyms": [
+      "leapt",
+      "jumped"
+    ]
+  },
+  {
+    "id": 101,
+    "word": "tucked",
+    "bangla": "গুঁজে দেওয়া",
+    "synonyms": [
+      "folded in",
+      "stuffed"
+    ]
+  },
+  {
+    "id": 102,
+    "word": "arousal",
+    "bangla": "উদ্দীপনা, জাগরণ",
+    "synonyms": [
+      "stimulation",
+      "awakening"
+    ]
+  },
+  {
+    "id": 103,
+    "word": "retuned",
+    "bangla": "নতুন করে সুর/মান ঠিক করা",
+    "synonyms": [
+      "readjusted",
+      "reset"
+    ]
+  },
+  {
+    "id": 104,
+    "word": "abrupt",
+    "bangla": "হঠাৎ",
+    "synonyms": [
+      "sudden",
+      "sharp"
+    ]
+  },
+  {
+    "id": 105,
+    "word": "apparatus",
+    "bangla": "যন্ত্রপাতি",
+    "synonyms": [
+      "equipment",
+      "device"
+    ]
+  },
+  {
+    "id": 106,
+    "word": "sought",
+    "bangla": "খোঁজা",
+    "synonyms": [
+      "looked for",
+      "tried to find"
+    ]
+  },
+  {
+    "id": 107,
+    "word": "shudder",
+    "bangla": "কেঁপে ওঠা",
+    "synonyms": [
+      "tremble",
+      "shiver"
+    ]
+  },
+  {
+    "id": 108,
+    "word": "tap into",
+    "bangla": "কাজে লাগানো",
+    "synonyms": [
+      "exploit",
+      "make use of"
+    ]
+  },
+  {
+    "id": 109,
+    "word": "perceptual",
+    "bangla": "উপলব্ধিগত",
+    "synonyms": [
+      "sensory",
+      "of perception"
+    ]
+  },
+  {
+    "id": 110,
+    "word": "distorted",
+    "bangla": "বিকৃত",
+    "synonyms": [
+      "twisted",
+      "warped"
+    ]
+  },
+  {
+    "id": 111,
+    "word": "intellectuals",
+    "bangla": "বুদ্ধিজীবী",
+    "synonyms": [
+      "scholars",
+      "thinkers"
+    ]
+  },
+  {
+    "id": 112,
+    "word": "revival",
+    "bangla": "পুনরুজ্জীবন",
+    "synonyms": [
+      "renewal",
+      "resurgence"
+    ]
+  },
+  {
+    "id": 113,
+    "word": "cartography",
+    "bangla": "মানচিত্র আঁকার বিদ্যা",
+    "synonyms": [
+      "map-making"
+    ]
+  },
+  {
+    "id": 114,
+    "word": "publicised",
+    "bangla": "প্রচারিত",
+    "synonyms": [
+      "advertised",
+      "announced"
+    ]
+  },
+  {
+    "id": 115,
+    "word": "enthusiasm",
+    "bangla": "উৎসাহ",
+    "synonyms": [
+      "eagerness",
+      "zeal"
+    ]
+  },
+  {
+    "id": 116,
+    "word": "perversely",
+    "bangla": "বিপরীতভাবে, জেদ করে",
+    "synonyms": [
+      "stubbornly",
+      "contrarily"
+    ]
+  },
+  {
+    "id": 117,
+    "word": "clung",
+    "bangla": "আঁকড়ে ধরা",
+    "synonyms": [
+      "held on",
+      "stuck"
+    ]
+  },
+  {
+    "id": 118,
+    "word": "keenly",
+    "bangla": "আগ্রহের সঙ্গে, তীব্রভাবে",
+    "synonyms": [
+      "eagerly",
+      "sharply"
+    ]
+  },
+  {
+    "id": 119,
+    "word": "foster / fostering",
+    "bangla": "লালন করা",
+    "synonyms": [
+      "nurture",
+      "encourage"
+    ]
+  },
+  {
+    "id": 120,
+    "word": "narrative",
+    "bangla": "বিবরণ, গল্প",
+    "synonyms": [
+      "story",
+      "account"
+    ]
+  },
+  {
+    "id": 121,
+    "word": "inaugurated",
+    "bangla": "উদ্বোধন করা",
+    "synonyms": [
+      "launched",
+      "opened"
+    ]
+  },
+  {
+    "id": 122,
+    "word": "formative",
+    "bangla": "গঠনমূলক",
+    "synonyms": [
+      "developmental",
+      "shaping"
+    ]
+  },
+  {
+    "id": 123,
+    "word": "substantial",
+    "bangla": "যথেষ্ট, বড় আকারের",
+    "synonyms": [
+      "considerable",
+      "significant"
+    ]
+  },
+  {
+    "id": 124,
+    "word": "lexical",
+    "bangla": "শব্দভাণ্ডার-সংক্রান্ত",
+    "synonyms": [
+      "of words",
+      "vocabulary-related"
+    ]
+  },
+  {
+    "id": 125,
+    "word": "suppressed",
+    "bangla": "দমন করা",
+    "synonyms": [
+      "restrained",
+      "crushed"
+    ]
+  },
+  {
+    "id": 126,
+    "word": "handicaps",
+    "bangla": "প্রতিবন্ধকতা",
+    "synonyms": [
+      "disadvantages",
+      "hindrances"
+    ]
+  },
+  {
+    "id": 127,
+    "word": "peers",
+    "bangla": "সমবয়সী, সমকক্ষ",
+    "synonyms": [
+      "equals",
+      "contemporaries"
+    ]
+  },
+  {
+    "id": 128,
+    "word": "strides",
+    "bangla": "অগ্রগতি, লম্বা পদক্ষেপ",
+    "synonyms": [
+      "progress",
+      "advances"
+    ]
+  },
+  {
+    "id": 129,
+    "word": "perpetuate",
+    "bangla": "জিইয়ে রাখা",
+    "synonyms": [
+      "keep alive",
+      "continue"
+    ]
+  },
+  {
+    "id": 130,
+    "word": "astounding",
+    "bangla": "বিস্ময়কর",
+    "synonyms": [
+      "amazing",
+      "stunning"
+    ]
+  },
+  {
+    "id": 131,
+    "word": "scoured",
+    "bangla": "তন্ন তন্ন করে খোঁজা",
+    "synonyms": [
+      "searched",
+      "combed"
+    ]
+  },
+  {
+    "id": 132,
+    "word": "dispense / dispensing",
+    "bangla": "বিতরণ করা",
+    "synonyms": [
+      "distributing",
+      "giving out"
+    ]
+  },
+  {
+    "id": 133,
+    "word": "irrigation",
+    "bangla": "সেচ",
+    "synonyms": [
+      "watering",
+      "water supply"
+    ]
+  },
+  {
+    "id": 134,
+    "word": "erodes",
+    "bangla": "ক্ষয় করে",
+    "synonyms": [
+      "wears away",
+      "eats away"
+    ]
+  },
+  {
+    "id": 135,
+    "word": "replenish",
+    "bangla": "পুনরায় ভরা",
+    "synonyms": [
+      "refill",
+      "restock"
+    ]
+  },
+  {
+    "id": 136,
+    "word": "coastline",
+    "bangla": "উপকূলরেখা",
+    "synonyms": [
+      "shore",
+      "seaboard"
+    ]
+  },
+  {
+    "id": 137,
+    "word": "lagoons",
+    "bangla": "উপহ্রদ, লেগুন",
+    "synonyms": [
+      "shallow coastal lakes"
+    ]
+  },
+  {
+    "id": 138,
+    "word": "laden",
+    "bangla": "বোঝাই",
+    "synonyms": [
+      "loaded",
+      "burdened"
+    ]
+  },
+  {
+    "id": 139,
+    "word": "desalination",
+    "bangla": "লবণমুক্ত করা",
+    "synonyms": [
+      "removing salt from water"
+    ]
+  },
+  {
+    "id": 140,
+    "word": "wilderness",
+    "bangla": "বন্য এলাকা",
+    "synonyms": [
+      "wild land",
+      "wasteland"
+    ]
+  },
+  {
+    "id": 141,
+    "word": "encompassed / encompassing",
+    "bangla": "ঘিরে রাখা, অন্তর্ভুক্ত করা",
+    "synonyms": [
+      "surrounded",
+      "included"
+    ]
+  },
+  {
+    "id": 142,
+    "word": "disparate",
+    "bangla": "ভিন্ন ধরনের",
+    "synonyms": [
+      "different",
+      "unlike"
+    ]
+  },
+  {
+    "id": 143,
+    "word": "implied",
+    "bangla": "ইঙ্গিত করা",
+    "synonyms": [
+      "hinted",
+      "suggested"
+    ]
+  },
+  {
+    "id": 144,
+    "word": "ensued",
+    "bangla": "ফলস্বরূপ ঘটা",
+    "synonyms": [
+      "followed",
+      "resulted"
+    ]
+  },
+  {
+    "id": 145,
+    "word": "retrenchment",
+    "bangla": "ব্যয় সংকোচন; ছাঁটাই",
+    "synonyms": [
+      "cutback",
+      "economy"
+    ]
+  },
+  {
+    "id": 146,
+    "word": "opted",
+    "bangla": "বেছে নেওয়া",
+    "synonyms": [
+      "chose",
+      "selected"
+    ]
+  },
+  {
+    "id": 147,
+    "word": "mundane",
+    "bangla": "সাধারণ, একঘেয়ে",
+    "synonyms": [
+      "ordinary",
+      "everyday"
+    ]
+  },
+  {
+    "id": 148,
+    "word": "reckon",
+    "bangla": "মনে করা, হিসাব করা",
+    "synonyms": [
+      "think",
+      "calculate"
+    ]
+  },
+  {
+    "id": 149,
+    "word": "emphasising",
+    "bangla": "জোর দেওয়া",
+    "synonyms": [
+      "stressing",
+      "highlighting"
+    ]
+  },
+  {
+    "id": 150,
+    "word": "prospects",
+    "bangla": "সম্ভাবনা",
+    "synonyms": [
+      "chances",
+      "outlook"
+    ]
+  },
+  {
+    "id": 151,
+    "word": "exacerbated",
+    "bangla": "আরও খারাপ করা",
+    "synonyms": [
+      "worsened",
+      "aggravated"
+    ]
+  },
+  {
+    "id": 152,
+    "word": "elusive",
+    "bangla": "ধরাছোঁয়ার বাইরে",
+    "synonyms": [
+      "hard to catch",
+      "slippery"
+    ]
+  },
+  {
+    "id": 153,
+    "word": "fragile",
+    "bangla": "ভঙ্গুর",
+    "synonyms": [
+      "delicate",
+      "breakable"
+    ]
+  },
+  {
+    "id": 154,
+    "word": "inhabitants",
+    "bangla": "বাসিন্দা",
+    "synonyms": [
+      "residents",
+      "dwellers"
+    ]
+  },
+  {
+    "id": 155,
+    "word": "profound",
+    "bangla": "গভীর",
+    "synonyms": [
+      "deep",
+      "intense"
+    ]
+  },
+  {
+    "id": 156,
+    "word": "trekkers",
+    "bangla": "পদযাত্রী",
+    "synonyms": [
+      "hikers",
+      "walkers"
+    ]
+  },
+  {
+    "id": 157,
+    "word": "undermine",
+    "bangla": "দুর্বল করা",
+    "synonyms": [
+      "weaken",
+      "sabotage"
+    ]
+  },
+  {
+    "id": 158,
+    "word": "dilemma",
+    "bangla": "উভয়সংকট",
+    "synonyms": [
+      "predicament",
+      "quandary"
+    ]
+  },
+  {
+    "id": 159,
+    "word": "dry up",
+    "bangla": "শুকিয়ে যাওয়া",
+    "synonyms": [
+      "dehydrate",
+      "wither"
+    ]
+  },
+  {
+    "id": 160,
+    "word": "trails",
+    "bangla": "পায়ে চলা পথ",
+    "synonyms": [
+      "paths",
+      "tracks"
+    ]
+  },
+  {
+    "id": 161,
+    "word": "inevitably",
+    "bangla": "অবশ্যম্ভাবীভাবে",
+    "synonyms": [
+      "unavoidably",
+      "certainly"
+    ]
+  },
+  {
+    "id": 162,
+    "word": "reinvigorating",
+    "bangla": "নতুন প্রাণ দেওয়া",
+    "synonyms": [
+      "refreshing",
+      "reviving"
+    ]
+  },
+  {
+    "id": 163,
+    "word": "imposed",
+    "bangla": "চাপিয়ে দেওয়া",
+    "synonyms": [
+      "forced",
+      "enforced"
+    ]
+  },
+  {
+    "id": 164,
+    "word": "renaissance",
+    "bangla": "নবজাগরণ",
+    "synonyms": [
+      "rebirth",
+      "revival"
+    ]
+  },
+  {
+    "id": 165,
+    "word": "exploited",
+    "bangla": "শোষণ করা; কাজে লাগানো",
+    "synonyms": [
+      "used",
+      "took advantage of"
+    ]
+  },
+  {
+    "id": 166,
+    "word": "repatriate",
+    "bangla": "দেশে ফিরিয়ে আনা",
+    "synonyms": [
+      "send home",
+      "return"
+    ]
+  },
+  {
+    "id": 167,
+    "word": "accrue",
+    "bangla": "জমা হওয়া",
+    "synonyms": [
+      "accumulate",
+      "build up"
+    ]
+  },
+  {
+    "id": 168,
+    "word": "pueblos",
+    "bangla": "পুয়েবলো (আমেরিকার আদিবাসী গ্রাম)",
+    "synonyms": [
+      "native villages"
+    ]
+  },
+  {
+    "id": 169,
+    "word": "penetrated",
+    "bangla": "ভেদ করা",
+    "synonyms": [
+      "pierced",
+      "entered"
+    ]
+  },
+  {
+    "id": 170,
+    "word": "shatters",
+    "bangla": "ভেঙে চুরমার হয়",
+    "synonyms": [
+      "smashes",
+      "breaks"
+    ]
+  },
+  {
+    "id": 171,
+    "word": "pane",
+    "bangla": "জানালার কাচ",
+    "synonyms": [
+      "window glass",
+      "glass sheet"
+    ]
+  },
+  {
+    "id": 172,
+    "word": "shrinks",
+    "bangla": "সঙ্কুচিত হয়",
+    "synonyms": [
+      "contracts",
+      "reduces"
+    ]
+  },
+  {
+    "id": 173,
+    "word": "tensile",
+    "bangla": "টান সহ্য করার ক্ষমতা সংক্রান্ত",
+    "synonyms": [
+      "stretchable",
+      "of stretching strength"
+    ]
+  },
+  {
+    "id": 174,
+    "word": "propagate",
+    "bangla": "ছড়ানো, বংশবিস্তার করা",
+    "synonyms": [
+      "spread",
+      "multiply"
+    ]
+  },
+  {
+    "id": 175,
+    "word": "furnace",
+    "bangla": "চুল্লি, ভাটি",
+    "synonyms": [
+      "oven",
+      "kiln"
+    ]
+  },
+  {
+    "id": 176,
+    "word": "subsequent",
+    "bangla": "পরবর্তী",
+    "synonyms": [
+      "following",
+      "later"
+    ]
+  },
+  {
+    "id": 177,
+    "word": "primed",
+    "bangla": "প্রস্তুত করা",
+    "synonyms": [
+      "prepared",
+      "readied"
+    ]
+  },
+  {
+    "id": 178,
+    "word": "unleashes",
+    "bangla": "মুক্ত করে দেয়",
+    "synonyms": [
+      "releases",
+      "lets loose"
+    ]
+  },
+  {
+    "id": 179,
+    "word": "elapses",
+    "bangla": "(সময়) অতিবাহিত হয়",
+    "synonyms": [
+      "passes",
+      "goes by"
+    ]
+  },
+  {
+    "id": 180,
+    "word": "inclusion",
+    "bangla": "অন্তর্ভুক্তি",
+    "synonyms": [
+      "involvement",
+      "addition"
+    ]
+  },
+  {
+    "id": 181,
+    "word": "contamination",
+    "bangla": "দূষণ",
+    "synonyms": [
+      "pollution",
+      "impurity"
+    ]
+  },
+  {
+    "id": 182,
+    "word": "demolishing",
+    "bangla": "ভেঙে ফেলা",
+    "synonyms": [
+      "destroying",
+      "tearing down"
+    ]
+  },
+  {
+    "id": 183,
+    "word": "extensive",
+    "bangla": "ব্যাপক",
+    "synonyms": [
+      "widespread",
+      "large"
+    ]
+  },
+  {
+    "id": 184,
+    "word": "underpinned",
+    "bangla": "ভিত্তি দেওয়া, সমর্থন করা",
+    "synonyms": [
+      "supported",
+      "strengthened"
+    ]
+  },
+  {
+    "id": 185,
+    "word": "intensive",
+    "bangla": "নিবিড়, গভীর",
+    "synonyms": [
+      "thorough",
+      "concentrated"
+    ]
+  },
+  {
+    "id": 186,
+    "word": "employs",
+    "bangla": "নিযুক্ত করে; ব্যবহার করে",
+    "synonyms": [
+      "hires",
+      "uses"
+    ]
+  },
+  {
+    "id": 187,
+    "word": "ethereal",
+    "bangla": "অপার্থিব, সূক্ষ্ম",
+    "synonyms": [
+      "heavenly",
+      "delicate"
+    ]
+  },
+  {
+    "id": 188,
+    "word": "tweaking",
+    "bangla": "সামান্য পরিবর্তন করা",
+    "synonyms": [
+      "adjusting",
+      "fine-tuning"
+    ]
+  },
+  {
+    "id": 189,
+    "word": "swivels",
+    "bangla": "ঘোরে",
+    "synonyms": [
+      "rotates",
+      "pivots"
+    ]
+  },
+  {
+    "id": 190,
+    "word": "unobtrusive",
+    "bangla": "অনাড়ম্বর, চোখে পড়ে না এমন",
+    "synonyms": [
+      "discreet",
+      "inconspicuous"
+    ]
+  },
+  {
+    "id": 191,
+    "word": "embedded",
+    "bangla": "গেঁথে থাকা",
+    "synonyms": [
+      "fixed",
+      "implanted"
+    ]
+  },
+  {
+    "id": 192,
+    "word": "unveiled",
+    "bangla": "উন্মোচন করা",
+    "synonyms": [
+      "revealed",
+      "disclosed"
+    ]
+  },
+  {
+    "id": 193,
+    "word": "altitude",
+    "bangla": "উচ্চতা",
+    "synonyms": [
+      "height",
+      "elevation"
+    ]
+  },
+  {
+    "id": 194,
+    "word": "startling",
+    "bangla": "চমকে দেওয়ার মতো",
+    "synonyms": [
+      "surprising",
+      "shocking"
+    ]
+  },
+  {
+    "id": 195,
+    "word": "commodities",
+    "bangla": "পণ্য",
+    "synonyms": [
+      "goods",
+      "products"
+    ]
+  },
+  {
+    "id": 196,
+    "word": "poses",
+    "bangla": "সমস্যা তৈরি করে; ভঙ্গি করে",
+    "synonyms": [
+      "presents",
+      "creates"
+    ]
+  },
+  {
+    "id": 197,
+    "word": "deregulation",
+    "bangla": "নিয়ন্ত্রণ তুলে নেওয়া",
+    "synonyms": [
+      "removing rules",
+      "liberalisation"
+    ]
+  },
+  {
+    "id": 198,
+    "word": "containerisation",
+    "bangla": "কনটেইনারে মাল পরিবহন",
+    "synonyms": [
+      "shipping in containers"
+    ]
+  },
+  {
+    "id": 199,
+    "word": "capsizing",
+    "bangla": "উল্টে যাওয়া",
+    "synonyms": [
+      "overturning",
+      "tipping over"
+    ]
+  },
+  {
+    "id": 200,
+    "word": "trackage",
+    "bangla": "রেলপথ",
+    "synonyms": [
+      "rail lines",
+      "tracks"
+    ]
+  },
+  {
+    "id": 201,
+    "word": "locomotives",
+    "bangla": "রেল ইঞ্জিন",
+    "synonyms": [
+      "engines",
+      "trains"
+    ]
+  },
+  {
+    "id": 202,
+    "word": "hauled",
+    "bangla": "টেনে নেওয়া",
+    "synonyms": [
+      "dragged",
+      "pulled"
+    ]
+  },
+  {
+    "id": 203,
+    "word": "albeit",
+    "bangla": "যদিও",
+    "synonyms": [
+      "although",
+      "though"
+    ]
+  },
+  {
+    "id": 204,
+    "word": "monopolies",
+    "bangla": "একচেটিয়া ব্যবসা",
+    "synonyms": [
+      "exclusive control",
+      "cartels"
+    ]
+  },
+  {
+    "id": 205,
+    "word": "thaws",
+    "bangla": "বরফ গলে",
+    "synonyms": [
+      "melts",
+      "unfreezes"
+    ]
+  },
+  {
+    "id": 206,
+    "word": "snowmobiles",
+    "bangla": "বরফের উপর চলা যান",
+    "synonyms": [
+      "snow vehicles",
+      "motor sleds"
+    ]
+  },
+  {
+    "id": 207,
+    "word": "permafrost",
+    "bangla": "স্থায়ীভাবে জমে থাকা মাটি",
+    "synonyms": [
+      "frozen ground"
+    ]
+  },
+  {
+    "id": 208,
+    "word": "precipitation",
+    "bangla": "বৃষ্টি/তুষারপাত",
+    "synonyms": [
+      "rainfall",
+      "snowfall"
+    ]
+  },
+  {
+    "id": 209,
+    "word": "precarious",
+    "bangla": "বিপজ্জনক, অনিশ্চিত",
+    "synonyms": [
+      "risky",
+      "unstable"
+    ]
+  },
+  {
+    "id": 210,
+    "word": "autonomy",
+    "bangla": "স্বায়ত্তশাসন",
+    "synonyms": [
+      "independence",
+      "self-rule"
+    ]
+  },
+  {
+    "id": 211,
+    "word": "venture",
+    "bangla": "ঝুঁকিপূর্ণ উদ্যোগ",
+    "synonyms": [
+      "enterprise",
+      "undertaking"
+    ]
+  },
+  {
+    "id": 212,
+    "word": "meagre",
+    "bangla": "সামান্য, অপ্রতুল",
+    "synonyms": [
+      "scanty",
+      "small"
+    ]
+  },
+  {
+    "id": 213,
+    "word": "descendants",
+    "bangla": "বংশধর",
+    "synonyms": [
+      "offspring",
+      "heirs"
+    ]
+  },
+  {
+    "id": 214,
+    "word": "scarce",
+    "bangla": "দুষ্প্রাপ্য",
+    "synonyms": [
+      "rare",
+      "limited"
+    ]
+  },
+  {
+    "id": 215,
+    "word": "curtailed",
+    "bangla": "ছাঁটা, কমিয়ে দেওয়া",
+    "synonyms": [
+      "cut short",
+      "reduced"
+    ]
+  },
+  {
+    "id": 216,
+    "word": "teasing out",
+    "bangla": "খুঁটিয়ে বের করা",
+    "synonyms": [
+      "extracting",
+      "working out"
+    ]
+  },
+  {
+    "id": 217,
+    "word": "credibility",
+    "bangla": "বিশ্বাসযোগ্যতা",
+    "synonyms": [
+      "trustworthiness",
+      "reliability"
+    ]
+  },
+  {
+    "id": 218,
+    "word": "impinge",
+    "bangla": "প্রভাব ফেলা, অনধিকার প্রবেশ",
+    "synonyms": [
+      "encroach",
+      "affect"
+    ]
+  },
+  {
+    "id": 219,
+    "word": "onslaught",
+    "bangla": "প্রচণ্ড আক্রমণ",
+    "synonyms": [
+      "attack",
+      "assault"
+    ]
+  },
+  {
+    "id": 220,
+    "word": "capriciousness",
+    "bangla": "খামখেয়ালিপনা",
+    "synonyms": [
+      "fickleness",
+      "unpredictability"
+    ]
+  },
+  {
+    "id": 221,
+    "word": "tremendous",
+    "bangla": "বিশাল, অসাধারণ",
+    "synonyms": [
+      "huge",
+      "great"
+    ]
+  },
+  {
+    "id": 222,
+    "word": "suburbs",
+    "bangla": "শহরতলি",
+    "synonyms": [
+      "outskirts",
+      "residential areas"
+    ]
+  },
+  {
+    "id": 223,
+    "word": "grossly",
+    "bangla": "চরমভাবে",
+    "synonyms": [
+      "extremely",
+      "flagrantly"
+    ]
+  },
+  {
+    "id": 224,
+    "word": "federal",
+    "bangla": "যুক্তরাষ্ট্রীয়",
+    "synonyms": [
+      "national",
+      "central"
+    ]
+  },
+  {
+    "id": 225,
+    "word": "referendum",
+    "bangla": "গণভোট",
+    "synonyms": [
+      "public vote",
+      "plebiscite"
+    ]
+  },
+  {
+    "id": 226,
+    "word": "spectacularly",
+    "bangla": "দর্শনীয়ভাবে",
+    "synonyms": [
+      "dramatically",
+      "impressively"
+    ]
+  },
+  {
+    "id": 227,
+    "word": "pace",
+    "bangla": "গতি",
+    "synonyms": [
+      "speed",
+      "rate"
+    ]
+  },
+  {
+    "id": 228,
+    "word": "sprawl",
+    "bangla": "এলোমেলোভাবে ছড়িয়ে পড়া",
+    "synonyms": [
+      "spread out",
+      "expand untidily"
+    ]
+  },
+  {
+    "id": 229,
+    "word": "congestion",
+    "bangla": "ভিড়, যানজট",
+    "synonyms": [
+      "overcrowding",
+      "jam"
+    ]
+  },
+  {
+    "id": 230,
+    "word": "farther",
+    "bangla": "আরও দূরে",
+    "synonyms": [
+      "further",
+      "more distant"
+    ]
+  },
+  {
+    "id": 231,
+    "word": "refutes",
+    "bangla": "খণ্ডন করে",
+    "synonyms": [
+      "disproves",
+      "rejects"
+    ]
+  },
+  {
+    "id": 232,
+    "word": "viable",
+    "bangla": "কার্যকর, টিকে থাকার যোগ্য",
+    "synonyms": [
+      "workable",
+      "feasible"
+    ]
+  },
+  {
+    "id": 233,
+    "word": "starkly",
+    "bangla": "স্পষ্টভাবে, তীব্রভাবে",
+    "synonyms": [
+      "sharply",
+      "plainly"
+    ]
+  },
+  {
+    "id": 234,
+    "word": "advocated",
+    "bangla": "সমর্থন করা",
+    "synonyms": [
+      "supported",
+      "recommended"
+    ]
+  },
+  {
+    "id": 235,
+    "word": "dispersal",
+    "bangla": "ছড়িয়ে পড়া",
+    "synonyms": [
+      "scattering",
+      "spreading"
+    ]
+  },
+  {
+    "id": 236,
+    "word": "flourishes",
+    "bangla": "সমৃদ্ধ হয়",
+    "synonyms": [
+      "thrives",
+      "prospers"
+    ]
+  },
+  {
+    "id": 237,
+    "word": "dementia",
+    "bangla": "স্মৃতিভ্রংশ রোগ",
+    "synonyms": [
+      "memory loss disease",
+      "senility"
+    ]
+  },
+  {
+    "id": 238,
+    "word": "demographer",
+    "bangla": "জনসংখ্যা-বিশেষজ্ঞ",
+    "synonyms": [
+      "population expert"
+    ]
+  },
+  {
+    "id": 239,
+    "word": "predecessors",
+    "bangla": "পূর্বসূরি",
+    "synonyms": [
+      "forerunners",
+      "ancestors"
+    ]
+  },
+  {
+    "id": 240,
+    "word": "surges",
+    "bangla": "হঠাৎ বৃদ্ধি",
+    "synonyms": [
+      "rushes",
+      "spikes"
+    ]
+  },
+  {
+    "id": 241,
+    "word": "subtle",
+    "bangla": "সূক্ষ্ম",
+    "synonyms": [
+      "delicate",
+      "faint"
+    ]
+  },
+  {
+    "id": 242,
+    "word": "attributed",
+    "bangla": "আরোপ করা",
+    "synonyms": [
+      "credited",
+      "ascribed"
+    ]
+  },
+  {
+    "id": 243,
+    "word": "ageing",
+    "bangla": "বার্ধক্য, বয়স বাড়া",
+    "synonyms": [
+      "growing old",
+      "maturing"
+    ]
+  },
+  {
+    "id": 244,
+    "word": "retain",
+    "bangla": "ধরে রাখা",
+    "synonyms": [
+      "keep",
+      "hold"
+    ]
+  },
+  {
+    "id": 245,
+    "word": "neurotrophic",
+    "bangla": "স্নায়ু-পুষ্টিকর",
+    "synonyms": [
+      "nerve-nourishing"
+    ]
+  },
+  {
+    "id": 246,
+    "word": "coursing",
+    "bangla": "প্রবাহিত হওয়া",
+    "synonyms": [
+      "flowing",
+      "running"
+    ]
+  },
+  {
+    "id": 247,
+    "word": "deteriorating",
+    "bangla": "অবনতি হওয়া",
+    "synonyms": [
+      "worsening",
+      "declining"
+    ]
+  },
+  {
+    "id": 248,
+    "word": "epidemiologist",
+    "bangla": "মহামারিবিদ",
+    "synonyms": [
+      "disease researcher"
+    ]
+  },
+  {
+    "id": 249,
+    "word": "feats",
+    "bangla": "কীর্তি",
+    "synonyms": [
+      "achievements",
+      "accomplishments"
+    ]
+  },
+  {
+    "id": 250,
+    "word": "conviction",
+    "bangla": "দৃঢ় বিশ্বাস; দণ্ড",
+    "synonyms": [
+      "firm belief",
+      "certainty"
+    ]
+  },
+  {
+    "id": 251,
+    "word": "convicted",
+    "bangla": "দোষী সাব্যস্ত",
+    "synonyms": [
+      "found guilty",
+      "condemned"
+    ]
+  },
+  {
+    "id": 252,
+    "word": "tribes",
+    "bangla": "উপজাতি",
+    "synonyms": [
+      "clans",
+      "communities"
+    ]
+  },
+  {
+    "id": 253,
+    "word": "herd",
+    "bangla": "পশুর দল",
+    "synonyms": [
+      "flock",
+      "group of animals"
+    ]
+  },
+  {
+    "id": 254,
+    "word": "sophisticated",
+    "bangla": "উন্নত, পরিশীলিত",
+    "synonyms": [
+      "advanced",
+      "refined"
+    ]
+  },
+  {
+    "id": 255,
+    "word": "paramount",
+    "bangla": "সর্বাধিক গুরুত্বপূর্ণ",
+    "synonyms": [
+      "supreme",
+      "chief"
+    ]
+  },
+  {
+    "id": 256,
+    "word": "grasp",
+    "bangla": "আঁকড়ে ধরা; বোঝা",
+    "synonyms": [
+      "grip",
+      "understand"
+    ]
+  },
+  {
+    "id": 257,
+    "word": "indispensable",
+    "bangla": "অপরিহার্য",
+    "synonyms": [
+      "essential",
+      "vital"
+    ]
+  },
+  {
+    "id": 258,
+    "word": "distinct",
+    "bangla": "স্পষ্ট, আলাদা",
+    "synonyms": [
+      "clear",
+      "separate"
+    ]
+  },
+  {
+    "id": 259,
+    "word": "stunned",
+    "bangla": "হতভম্ব",
+    "synonyms": [
+      "shocked",
+      "astonished"
+    ]
+  },
+  {
+    "id": 260,
+    "word": "thrilled",
+    "bangla": "রোমাঞ্চিত",
+    "synonyms": [
+      "excited",
+      "delighted"
+    ]
+  },
+  {
+    "id": 261,
+    "word": "preceding",
+    "bangla": "পূর্ববর্তী",
+    "synonyms": [
+      "previous",
+      "earlier"
+    ]
+  },
+  {
+    "id": 262,
+    "word": "enduring",
+    "bangla": "স্থায়ী",
+    "synonyms": [
+      "lasting",
+      "long-lived"
+    ]
+  },
+  {
+    "id": 263,
+    "word": "gimmick",
+    "bangla": "কৌশল, চটকদার চাল",
+    "synonyms": [
+      "trick",
+      "stunt"
+    ]
+  },
+  {
+    "id": 264,
+    "word": "fairground",
+    "bangla": "মেলার মাঠ",
+    "synonyms": [
+      "funfair",
+      "carnival site"
+    ]
+  },
+  {
+    "id": 265,
+    "word": "lease",
+    "bangla": "ইজারা",
+    "synonyms": [
+      "rent",
+      "let"
+    ]
+  },
+  {
+    "id": 266,
+    "word": "conceived",
+    "bangla": "কল্পনা করা",
+    "synonyms": [
+      "imagined",
+      "devised"
+    ]
+  },
+  {
+    "id": 267,
+    "word": "astonishing",
+    "bangla": "বিস্ময়কর",
+    "synonyms": [
+      "amazing",
+      "remarkable"
+    ]
+  },
+  {
+    "id": 268,
+    "word": "entice",
+    "bangla": "প্রলুব্ধ করা",
+    "synonyms": [
+      "attract",
+      "lure"
+    ]
+  },
+  {
+    "id": 269,
+    "word": "prone",
+    "bangla": "প্রবণ",
+    "synonyms": [
+      "likely",
+      "liable"
+    ]
+  },
+  {
+    "id": 270,
+    "word": "redundant",
+    "bangla": "অপ্রয়োজনীয়",
+    "synonyms": [
+      "unnecessary",
+      "surplus"
+    ]
+  },
+  {
+    "id": 271,
+    "word": "bureaucratic",
+    "bangla": "আমলাতান্ত্রিক",
+    "synonyms": [
+      "official",
+      "red-tape"
+    ]
+  },
+  {
+    "id": 272,
+    "word": "incongruous",
+    "bangla": "বেমানান, অসঙ্গত",
+    "synonyms": [
+      "out of place",
+      "inappropriate"
+    ]
+  },
+  {
+    "id": 273,
+    "word": "perceive",
+    "bangla": "উপলব্ধি করা",
+    "synonyms": [
+      "notice",
+      "sense"
+    ]
+  },
+  {
+    "id": 274,
+    "word": "appraisal",
+    "bangla": "মূল্যায়ন",
+    "synonyms": [
+      "assessment",
+      "evaluation"
+    ]
+  },
+  {
+    "id": 275,
+    "word": "contingent",
+    "bangla": "নির্ভরশীল; দল",
+    "synonyms": [
+      "dependent",
+      "conditional"
+    ]
+  },
+  {
+    "id": 276,
+    "word": "attainment",
+    "bangla": "অর্জন",
+    "synonyms": [
+      "achievement",
+      "accomplishment"
+    ]
+  },
+  {
+    "id": 277,
+    "word": "longevity",
+    "bangla": "দীর্ঘ জীবন",
+    "synonyms": [
+      "long life",
+      "durability"
+    ]
+  },
+  {
+    "id": 278,
+    "word": "prolonging",
+    "bangla": "দীর্ঘায়িত করা",
+    "synonyms": [
+      "extending",
+      "lengthening"
+    ]
+  },
+  {
+    "id": 279,
+    "word": "regimen",
+    "bangla": "নিয়মকানুন, খাদ্য-ব্যায়ামের তালিকা",
+    "synonyms": [
+      "routine",
+      "plan"
+    ]
+  },
+  {
+    "id": 280,
+    "word": "underlie",
+    "bangla": "ভিত্তি হওয়া",
+    "synonyms": [
+      "form the basis of",
+      "support"
+    ]
+  },
+  {
+    "id": 281,
+    "word": "radicals",
+    "bangla": "চরমপন্থী, আমূল সংস্কারপন্থী",
+    "synonyms": [
+      "extremists",
+      "reformers"
+    ]
+  },
+  {
+    "id": 282,
+    "word": "escalating",
+    "bangla": "বেড়ে চলা",
+    "synonyms": [
+      "increasing",
+      "intensifying"
+    ]
+  },
+  {
+    "id": 283,
+    "word": "extravagance",
+    "bangla": "অমিতব্যয়",
+    "synonyms": [
+      "lavishness",
+      "wastefulness"
+    ]
+  },
+  {
+    "id": 284,
+    "word": "pamphlets",
+    "bangla": "পুস্তিকা",
+    "synonyms": [
+      "leaflets",
+      "brochures"
+    ]
+  },
+  {
+    "id": 285,
+    "word": "inundation",
+    "bangla": "প্লাবন",
+    "synonyms": [
+      "flood",
+      "deluge"
+    ]
+  },
+  {
+    "id": 286,
+    "word": "emblazoned",
+    "bangla": "উজ্জ্বলভাবে খোদাই/ছাপা",
+    "synonyms": [
+      "decorated",
+      "printed boldly"
+    ]
+  },
+  {
+    "id": 287,
+    "word": "scrutinized",
+    "bangla": "খুঁটিয়ে পরীক্ষা করা",
+    "synonyms": [
+      "examined",
+      "inspected"
+    ]
+  },
+  {
+    "id": 288,
+    "word": "nourished",
+    "bangla": "পুষ্টি দেওয়া",
+    "synonyms": [
+      "fed",
+      "nurtured"
+    ]
+  },
+  {
+    "id": 289,
+    "word": "notoriously",
+    "bangla": "কুখ্যাতভাবে",
+    "synonyms": [
+      "infamously",
+      "disreputably"
+    ]
+  },
+  {
+    "id": 290,
+    "word": "shoved",
+    "bangla": "ধাক্কা দেওয়া",
+    "synonyms": [
+      "pushed",
+      "thrust"
+    ]
+  },
+  {
+    "id": 291,
+    "word": "persistent",
+    "bangla": "নাছোড়, অবিরাম",
+    "synonyms": [
+      "constant",
+      "determined"
+    ]
+  },
+  {
+    "id": 292,
+    "word": "refrain",
+    "bangla": "বিরত থাকা",
+    "synonyms": [
+      "abstain",
+      "hold back"
+    ]
+  },
+  {
+    "id": 293,
+    "word": "sanctions",
+    "bangla": "নিষেধাজ্ঞা; অনুমোদন",
+    "synonyms": [
+      "penalties",
+      "approval"
+    ]
+  },
+  {
+    "id": 294,
+    "word": "worthwhile",
+    "bangla": "মূল্যবান, সার্থক",
+    "synonyms": [
+      "valuable",
+      "useful"
+    ]
+  },
+  {
+    "id": 295,
+    "word": "confronting",
+    "bangla": "মুখোমুখি হওয়া",
+    "synonyms": [
+      "facing",
+      "challenging"
+    ]
+  }
+]

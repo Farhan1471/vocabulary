@@ -22,8 +22,8 @@ export default function StudySets() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+    <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
+      <div className="bg-white dark:bg-slate-900 p-4 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
           <FontAwesomeIcon icon={faFolderOpen} className="text-emerald-500" />
           <span>Structured Study Sets (ধাপে ধাপে ভোকাবুলারি শিক্ষা)</span>

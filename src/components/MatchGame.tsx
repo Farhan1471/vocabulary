@@ -10,7 +10,13 @@ import {
   faClock,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import confetti from "canvas-confetti";
+// canvas-confetti is browser-only — dynamically imported at runtime
+let confetti: ((opts?: Record<string, unknown>) => void) | null = null;
+if (typeof window !== "undefined") {
+  import("canvas-confetti").then((m) => {
+    confetti = m.default as (opts?: Record<string, unknown>) => void;
+  });
+}
 import { WordItem } from "@/data/vocabulary";
 
 interface CardTile {
@@ -111,7 +117,7 @@ export default function MatchGame() {
             setIsRunning(false);
             setIsCompleted(true);
             try {
-              confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+              confetti?.({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
             } catch (e) {
               console.error(e);
             }
@@ -130,20 +136,20 @@ export default function MatchGame() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6">
+    <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
       {/* Header and stats */}
-      <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+      <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <div>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <h2 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <FontAwesomeIcon icon={faGamepad} className="text-emerald-500" />
-            <span>Word Matching Game (ম্যাচিং গেম)</span>
+            <span>Word Matching Game</span>
           </h2>
           <p className="text-xs text-slate-500 font-bangla">
             ইংরেজি শব্দের সাথে সঠিক বাংলা অর্থ মিলিয়ে বোর্ড খালি করুন
           </p>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
             <FontAwesomeIcon icon={faClock} className="text-slate-400" />
             <span>{seconds}s</span>
@@ -153,7 +159,7 @@ export default function MatchGame() {
           </div>
           <button
             onClick={startNewGame}
-            className="p-2 rounded-lg text-slate-500 hover:text-emerald-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            className="min-h-[36px] min-w-[36px] p-2 rounded-lg text-slate-500 hover:text-emerald-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition touch-manipulation"
             title="Restart Game"
           >
             <FontAwesomeIcon icon={faRotateRight} />
@@ -163,24 +169,24 @@ export default function MatchGame() {
 
       {/* Completion Modal / Banner */}
       {isCompleted ? (
-        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-xl text-center space-y-4">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xl text-center space-y-4">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 text-3xl mb-1">
             <FontAwesomeIcon icon={faTrophy} />
           </div>
-          <h3 className="text-2xl font-black text-slate-900 dark:text-white">All Matched! 🎉</h3>
+          <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">All Matched! 🎉</h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 font-bangla">
             আপনি {seconds} সেকেন্ডে {moves} টি পদক্ষেপে সম্পূর্ণ করেছেন!
           </p>
           <button
             onClick={startNewGame}
-            className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/25 transition active:scale-95"
+            className="w-full sm:w-auto px-6 py-3 min-h-[48px] rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/25 transition active:scale-95 touch-manipulation"
           >
             Play Another Round
           </button>
         </div>
       ) : (
         /* Tiles Grid */
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
           {tiles.map((tile) => {
             const isSelected = selectedTile?.id === tile.id;
             const isWrong = wrongPair?.includes(tile.id);
@@ -203,7 +209,7 @@ export default function MatchGame() {
                 key={tile.id}
                 onClick={() => handleTileClick(tile)}
                 disabled={tile.isMatched}
-                className={`min-h-[90px] p-4 rounded-2xl border text-center transition-all flex flex-col items-center justify-center relative ${style}`}
+                className={`min-h-[80px] sm:min-h-[90px] p-3 sm:p-4 rounded-2xl border text-center transition-all flex flex-col items-center justify-center relative touch-manipulation ${style}`}
               >
                 {tile.isMatched && (
                   <span className="absolute top-2 right-2 text-emerald-600 dark:text-emerald-400 text-xs">
@@ -211,14 +217,14 @@ export default function MatchGame() {
                   </span>
                 )}
                 <span
-                  className={`text-sm sm:text-base leading-tight ${
+                  className={`text-sm leading-tight ${
                     tile.type === "bangla" ? "font-bangla font-semibold" : "font-bold"
                   }`}
                 >
                   {tile.text}
                 </span>
                 <span className="text-[10px] uppercase font-semibold text-slate-400 dark:text-slate-500 mt-1">
-                  {tile.type === "word" ? "English" : "Bangla"}
+                  {tile.type === "word" ? "EN" : "BN"}
                 </span>
               </button>
             );

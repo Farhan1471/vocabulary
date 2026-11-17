@@ -98,7 +98,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-5 sm:space-y-8">
         {/* TAB 1: ALL WORDS */}
         {activeTab === "all" && (
           <div className="space-y-6">
@@ -181,21 +181,21 @@ export default function Home() {
 
             {/* Pagination Controls */}
             {totalPages > 1 && (
-              <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+              <div className="pt-4 sm:pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition ${
+                  className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition min-h-[40px] ${
                     currentPage === 1
                       ? "opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800"
-                      : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
+                      : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 active:scale-95"
                   }`}
                 >
                   <FontAwesomeIcon icon={faArrowLeft} />
                   <span>Previous</span>
                 </button>
 
-                <div className="text-xs sm:text-sm font-medium text-slate-500">
+                <div className="text-xs sm:text-sm font-medium text-slate-500 whitespace-nowrap">
                   Page <strong className="text-slate-900 dark:text-white">{currentPage}</strong> of{" "}
                   {totalPages}
                 </div>
@@ -203,10 +203,10 @@ export default function Home() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition ${
+                  className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition min-h-[40px] ${
                     currentPage === totalPages
                       ? "opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800"
-                      : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
+                      : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 active:scale-95"
                   }`}
                 >
                   <span>Next</span>

@@ -336,7 +336,7 @@ export default function QuizMode() {
                   key={idx}
                   onClick={() => handleSelectOption(option)}
                   disabled={isAnswered}
-                  className={`p-4 rounded-2xl border text-left transition flex items-center justify-between text-base ${btnStyle}`}
+                  className={`p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition flex items-center justify-between text-sm sm:text-base min-h-[50px] active:scale-98 ${btnStyle}`}
                 >
                   <span className="font-bangla font-semibold">{option}</span>
                   {icon}

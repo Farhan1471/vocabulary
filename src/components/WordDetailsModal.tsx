@@ -62,13 +62,13 @@ export default function WordDetailsModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/60 backdrop-blur-sm animate-fadeIn">
       <div
-        className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all"
+        className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-4 sm:p-8 max-h-[90vh] overflow-y-auto transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
               #{selectedWord.id} of {words.length}
@@ -76,10 +76,10 @@ export default function WordDetailsModal() {
             <span className="text-xs text-slate-400 font-medium">Set {selectedWord.batch}</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => toggleFavorite(selectedWord.id)}
-              className="p-2 rounded-xl text-slate-400 hover:text-yellow-500 hover:bg-yellow-50 dark:hover:bg-yellow-950/30 transition"
+              className="w-9 h-9 flex items-center justify-center rounded-xl text-slate-400 hover:text-yellow-500 hover:bg-yellow-50 dark:hover:bg-yellow-950/30 transition active:scale-95"
               title={isFav ? "Starred" : "Star"}
             >
               <FontAwesomeIcon
@@ -89,7 +89,7 @@ export default function WordDetailsModal() {
             </button>
             <button
               onClick={() => setSelectedWord(null)}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+              className="w-9 h-9 flex items-center justify-center rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95"
             >
               <FontAwesomeIcon icon={faXmark} className="text-lg" />
             </button>
@@ -97,15 +97,15 @@ export default function WordDetailsModal() {
         </div>
 
         {/* Word Hero & Audio */}
-        <div className="py-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        <div className="py-4 sm:py-6 text-center">
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
             {selectedWord.word}
           </h2>
 
-          <div className="mt-3 flex items-center justify-center gap-2">
+          <div className="mt-2.5 sm:mt-3 flex items-center justify-center gap-2">
             <button
               onClick={() => speakWord(selectedWord.word)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-sm font-semibold hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition shadow-xs"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-bold hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition shadow-xs active:scale-95 min-h-[38px]"
             >
               <FontAwesomeIcon icon={faVolumeHigh} className="text-emerald-600" />
               <span>Listen Pronunciation</span>
@@ -114,26 +114,26 @@ export default function WordDetailsModal() {
         </div>
 
         {/* Meaning Box */}
-        <div className="space-y-4">
-          <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
-            <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider block mb-1">
+        <div className="space-y-3 sm:space-y-4">
+          <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+            <span className="text-[10px] sm:text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider block mb-1">
               বাংলা অর্থ (Bangla Meaning)
             </span>
-            <p className="text-xl sm:text-2xl font-bold text-emerald-900 dark:text-emerald-200 font-bangla">
+            <p className="text-lg sm:text-2xl font-bold text-emerald-900 dark:text-emerald-200 font-bangla">
               {selectedWord.bangla}
             </p>
           </div>
 
           {/* Synonyms Box */}
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+          <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800">
+            <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1.5 sm:mb-2">
               সমার্থক শব্দসমূহ (Synonyms)
             </span>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {selectedWord.synonyms.map((syn, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1.5 rounded-xl text-sm font-medium bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-xs border border-slate-200/80 dark:border-slate-600"
+                  className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-xs border border-slate-200/80 dark:border-slate-600"
                 >
                   {syn}
                 </span>
@@ -143,10 +143,10 @@ export default function WordDetailsModal() {
         </div>
 
         {/* Mastered Status Button */}
-        <div className="mt-6">
+        <div className="mt-4 sm:mt-6">
           <button
             onClick={() => toggleMastered(selectedWord.id)}
-            className={`w-full py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition ${
+            className={`w-full min-h-[44px] py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition active:scale-98 ${
               isMastered
                 ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20"
                 : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-500 hover:text-white"
@@ -158,29 +158,29 @@ export default function WordDetailsModal() {
         </div>
 
         {/* Footer Navigation (Prev / Next) */}
-        <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+        <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
           <button
             onClick={handlePrev}
             disabled={!hasPrev}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition ${
+            className={`min-h-[38px] flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition active:scale-95 ${
               hasPrev
-                ? "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
-                : "text-slate-300 dark:text-slate-700 cursor-not-allowed"
+                ? "text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200"
+                : "text-slate-300 dark:text-slate-700 cursor-not-allowed opacity-50"
             }`}
           >
             <FontAwesomeIcon icon={faArrowLeft} />
-            <span>Previous Word</span>
+            <span>Prev Word</span>
           </button>
 
-          <span className="text-xs text-slate-400 font-medium">Use ← and → keys</span>
+          <span className="text-[11px] text-slate-400 font-medium hidden sm:inline">Use ← and → keys</span>
 
           <button
             onClick={handleNext}
             disabled={!hasNext}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition ${
+            className={`min-h-[38px] flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition active:scale-95 ${
               hasNext
-                ? "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
-                : "text-slate-300 dark:text-slate-700 cursor-not-allowed"
+                ? "text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200"
+                : "text-slate-300 dark:text-slate-700 cursor-not-allowed opacity-50"
             }`}
           >
             <span>Next Word</span>

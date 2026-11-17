@@ -128,13 +128,13 @@ export default function FlashcardMode() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       {/* Top Filter and Controls */}
-      <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-slate-400">Cards:</span>
-          <div className="flex rounded-lg bg-slate-100 dark:bg-slate-800 p-1">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar touch-pan-x pb-0.5">
+          <span className="text-xs font-bold text-slate-400 shrink-0">Cards:</span>
+          <div className="flex rounded-xl bg-slate-100 dark:bg-slate-800 p-1 shrink-0">
             <button
               onClick={() => setCardFilter("all")}
-              className={`px-3 py-1 rounded-md text-xs font-medium transition ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition min-h-[34px] ${
                 cardFilter === "all"
                   ? "bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-xs"
                   : "text-slate-500 hover:text-slate-800 dark:hover:text-white"
@@ -144,7 +144,7 @@ export default function FlashcardMode() {
             </button>
             <button
               onClick={() => setCardFilter("unmastered")}
-              className={`px-3 py-1 rounded-md text-xs font-medium transition ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition min-h-[34px] ${
                 cardFilter === "unmastered"
                   ? "bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-xs"
                   : "text-slate-500 hover:text-slate-800 dark:hover:text-white"
@@ -154,7 +154,7 @@ export default function FlashcardMode() {
             </button>
             <button
               onClick={() => setCardFilter("favorites")}
-              className={`px-3 py-1 rounded-md text-xs font-medium transition ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition min-h-[34px] ${
                 cardFilter === "favorites"
                   ? "bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-xs"
                   : "text-slate-500 hover:text-slate-800 dark:hover:text-white"
@@ -165,12 +165,12 @@ export default function FlashcardMode() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between sm:justify-end gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-800">
           {/* Flip Mode Toggle */}
           <button
             onClick={() => setInvertCards(!invertCards)}
             title="Switch Front/Back (English first or Bangla first)"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
+            className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition min-h-[36px] active:scale-95 ${
               invertCards
                 ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300"
                 : "border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800"
@@ -184,7 +184,7 @@ export default function FlashcardMode() {
           <button
             onClick={handleShuffle}
             title="Shuffle cards"
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            className="min-h-[36px] min-w-[36px] flex items-center justify-center rounded-xl text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition active:scale-95"
           >
             <FontAwesomeIcon icon={faShuffle} />
           </button>
@@ -340,32 +340,32 @@ export default function FlashcardMode() {
       </div>
 
       {/* Action Buttons: Still Learning vs Mastered */}
-      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
         <button
           onClick={handleMarkLearning}
-          className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 font-semibold text-sm hover:bg-amber-100 dark:hover:bg-amber-900/40 transition active:scale-98 shadow-xs"
+          className="flex items-center justify-center gap-2 min-h-[46px] py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl sm:rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 font-bold text-xs sm:text-sm hover:bg-amber-100 dark:hover:bg-amber-900/40 transition active:scale-95 shadow-xs"
         >
           <FontAwesomeIcon icon={faClock} />
-          <span>Still Learning (↓)</span>
+          <span>Still Learning</span>
         </button>
 
         <button
           onClick={handleMarkMastered}
-          className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition active:scale-98 shadow-md shadow-emerald-600/25"
+          className="flex items-center justify-center gap-2 min-h-[46px] py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition active:scale-95 shadow-md shadow-emerald-600/25"
         >
           <FontAwesomeIcon icon={faCheck} />
-          <span>Mastered / Got It (↑)</span>
+          <span>Mastered</span>
         </button>
       </div>
 
       {/* Navigation Buttons: Previous / Next */}
-      <div className="flex items-center justify-between pt-2">
+      <div className="flex items-center justify-between pt-1 sm:pt-2">
         <button
           onClick={handlePrev}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition"
+          className="flex items-center gap-2 min-h-[42px] px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition active:scale-95"
         >
           <FontAwesomeIcon icon={faArrowLeft} />
-          <span>Previous (←)</span>
+          <span>Previous</span>
         </button>
 
         <div className="text-xs text-slate-400 hidden sm:block">
@@ -374,9 +374,9 @@ export default function FlashcardMode() {
 
         <button
           onClick={handleNext}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition"
+          className="flex items-center gap-2 min-h-[42px] px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition active:scale-95"
         >
-          <span>Next (→)</span>
+          <span>Next</span>
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>

@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "375px",
+      },
+      scale: {
+        98: "0.98",
+      },
       colors: {
         brand: {
           50: "#f0fdf4",

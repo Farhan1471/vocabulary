@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Hind_Siliguri } from "next/font/google";
+import { Inter, Hind_Siliguri, Kalam } from "next/font/google";
 import "./globals.css";
 import { VocabularyProvider } from "@/context/VocabularyContext";
 
@@ -8,6 +8,11 @@ const hindSiliguri = Hind_Siliguri({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["bengali", "latin"],
   variable: "--font-bangla",
+});
+const kalam = Kalam({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-handwritten",
 });
 
 export const viewport: Viewport = {
@@ -42,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${hindSiliguri.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${hindSiliguri.variable} ${kalam.variable} scroll-smooth`}>
       <head>
         <link
           rel="icon"

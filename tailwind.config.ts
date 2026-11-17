@@ -31,6 +31,7 @@ const config: Config = {
       },
       fontFamily: {
         bangla: ["Hind Siliguri", "Noto Sans Bengali", "sans-serif"],
+        handwritten: ["var(--font-handwritten)", "Kalam", "cursive", "sans-serif"],
       },
       animation: {
         "flip": "flip 0.6s ease-in-out",

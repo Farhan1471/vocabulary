@@ -388,10 +388,10 @@ export default function TopicSection({
                           )}
                         </div>
                         <p
-                          className={`text-xs sm:text-sm leading-relaxed sm:leading-relaxed ${
+                          className={`font-bold text-sm sm:text-base leading-relaxed sm:leading-relaxed tracking-normal ${
                             isAPlaying
-                              ? "text-emerald-950 dark:text-emerald-50 font-medium"
-                              : "text-emerald-900 dark:text-emerald-100/90 font-normal"
+                              ? "text-emerald-950 dark:text-emerald-50"
+                              : "text-emerald-950 dark:text-emerald-100"
                           }`}
                         >
                           {q.answer}

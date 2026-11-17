@@ -96,7 +96,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar activeSection="vocabulary" />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-5 sm:space-y-8">
         {/* TAB 1: ALL WORDS */}

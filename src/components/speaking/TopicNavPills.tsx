@@ -46,8 +46,8 @@ interface TopicNavPillsProps {
   practicedIds: string[]; // e.g. "t1-q1"
   onSelectTopic: (topicId: number | null) => void;
   onScrollToTopic: (topicId: number) => void;
-  viewMode: "all" | "single";
-  setViewMode: (mode: "all" | "single") => void;
+  viewMode: "cards" | "topic" | "all";
+  setViewMode: (mode: "cards" | "topic" | "all") => void;
 }
 
 export default function TopicNavPills({
@@ -64,45 +64,69 @@ export default function TopicNavPills({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 shadow-xs space-y-3 transition-colors">
+    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-xs space-y-2.5 transition-colors">
       {/* Top Header & View Mode Switcher */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">
-            Topics (15)
-          </span>
-          <span className="text-[11px] text-slate-400 dark:text-slate-500">
-            • Tap to jump or filter
+          <button
+            onClick={() => {
+              setViewMode("cards");
+              onSelectTopic(null);
+            }}
+            className="flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+          >
+            <FontAwesomeIcon icon={faLayerGroup} />
+            <span>← Back to 15 Topic Cards</span>
+          </button>
+          <span className="text-slate-300 dark:text-slate-700">•</span>
+          <span className="text-[11px] text-slate-500 dark:text-slate-400">
+            {viewMode === "topic" && selectedTopicId
+              ? `Viewing Topic ${selectedTopicId} of 15`
+              : "Viewing All 15 Topics"}
           </span>
         </div>
 
-        {/* View Mode Toggle: All Sections vs Single Focus */}
+        {/* View Mode Toggle */}
         <div className="flex items-center w-full sm:w-auto bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-semibold">
+          <button
+            onClick={() => {
+              setViewMode("cards");
+              onSelectTopic(null);
+            }}
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center min-h-[32px] flex items-center justify-center gap-1.5 ${
+              viewMode === "cards"
+                ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs font-bold"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+            }`}
+          >
+            <FontAwesomeIcon icon={faLayerGroup} className="text-[10px]" />
+            <span>Cards</span>
+          </button>
+          <button
+            onClick={() => {
+              setViewMode("topic");
+              if (selectedTopicId === null) onSelectTopic(1);
+            }}
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center min-h-[32px] flex items-center justify-center gap-1.5 ${
+              viewMode === "topic"
+                ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs font-bold"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+            }`}
+          >
+            <span>Single Topic</span>
+          </button>
           <button
             onClick={() => {
               setViewMode("all");
               onSelectTopic(null);
             }}
-            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center min-h-[34px] flex items-center justify-center ${
-              viewMode === "all" && selectedTopicId === null
+            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center min-h-[32px] flex items-center justify-center gap-1.5 ${
+              viewMode === "all"
                 ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs font-bold"
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             }`}
           >
-            All Sections
-          </button>
-          <button
-            onClick={() => {
-              setViewMode("single");
-              if (selectedTopicId === null) onSelectTopic(1);
-            }}
-            className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center min-h-[34px] flex items-center justify-center ${
-              viewMode === "single"
-                ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs font-bold"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-            }`}
-          >
-            Single Topic
+            <span>All 15 Topics</span>
           </button>
         </div>
       </div>
@@ -111,33 +135,48 @@ export default function TopicNavPills({
       <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar touch-pan-x px-0.5">
         <button
           onClick={() => {
+            setViewMode("cards");
             onSelectTopic(null);
-            if (viewMode === "single") setViewMode("all");
           }}
-          className={`flex items-center gap-1.5 min-h-[38px] px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all border shrink-0 active:scale-95 ${
-            selectedTopicId === null && viewMode === "all"
+          className={`flex items-center gap-1.5 min-h-[36px] px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all border shrink-0 active:scale-95 ${
+            viewMode === "cards"
               ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
               : "bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700"
           }`}
         >
           <FontAwesomeIcon icon={faLayerGroup} className="text-xs" />
-          <span>All 15 Topics</span>
+          <span>All Topic Cards</span>
+        </button>
+
+        <button
+          onClick={() => {
+            onSelectTopic(null);
+            setViewMode("all");
+          }}
+          className={`flex items-center gap-1.5 min-h-[36px] px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all border shrink-0 active:scale-95 ${
+            selectedTopicId === null && viewMode === "all"
+              ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
+              : "bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700"
+          }`}
+        >
+          <span>All 180 Q&A</span>
         </button>
 
         {topics.map((t) => {
-          const isSelected = selectedTopicId === t.id;
+          const isSelected = selectedTopicId === t.id && viewMode === "topic";
           const icon = TOPIC_ICON_MAP[t.id] || faHouse;
           const practicedCount = getTopicPracticedCount(t.id);
-          const isComplete = practicedCount === t.questions.length;
+          const isComplete = practicedCount === t.questions.length && t.questions.length > 0;
 
           return (
             <button
               key={t.id}
               onClick={() => {
                 onSelectTopic(t.id);
+                setViewMode("topic");
                 onScrollToTopic(t.id);
               }}
-              className={`flex items-center gap-1.5 min-h-[38px] px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border shrink-0 active:scale-95 ${
+              className={`flex items-center gap-1.5 min-h-[36px] px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border shrink-0 active:scale-95 ${
                 isSelected
                   ? "bg-indigo-600 text-white border-indigo-600 shadow-xs font-bold"
                   : isComplete

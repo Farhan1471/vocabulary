@@ -1,21 +1,23 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
-import SpeakingNavbar from "@/components/speaking/SpeakingNavbar";
+import Navbar from "@/components/Navbar";
 import VoiceControlsBar from "@/components/speaking/VoiceControlsBar";
 import TopicNavPills from "@/components/speaking/TopicNavPills";
 import TopicSection from "@/components/speaking/TopicSection";
+import TopicCardsGrid from "@/components/speaking/TopicCardsGrid";
 import FloatingAudioPlayer from "@/components/speaking/FloatingAudioPlayer";
 import { SPEAKING_TOPICS, SpeakingTopic } from "@/data/speakingPart1";
-import { useSpeakingAudio, isBritishVoice } from "@/hooks/useSpeakingAudio";
+import { useSpeakingAudio } from "@/hooks/useSpeakingAudio";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faComments,
-  faVolumeHigh,
   faLayerGroup,
-  faCheck,
   faArrowUp,
-  faRotateRight,
+  faArrowLeft,
+  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function SpeakingPage() {
@@ -41,7 +43,7 @@ export default function SpeakingPage() {
   const [practicedIds, setPracticedIds] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTopicId, setSelectedTopicId] = useState<number | null>(null);
-  const [viewMode, setViewMode] = useState<"all" | "single">("all");
+  const [viewMode, setViewMode] = useState<"cards" | "topic" | "all">("cards");
 
   // Continuous Topic Playlist State
   const [topicPlayState, setTopicPlayState] = useState<{
@@ -75,47 +77,46 @@ export default function SpeakingPage() {
     });
   };
 
-  // Filtered Topics based on Search
+  // Filtered Topics based on Search and ViewMode
   const filteredTopics = useMemo(() => {
-    if (!searchQuery.trim()) {
-      if (viewMode === "single" && selectedTopicId !== null) {
-        return SPEAKING_TOPICS.filter((t) => t.id === selectedTopicId);
-      }
-      return SPEAKING_TOPICS;
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      return SPEAKING_TOPICS.map((topic) => {
+        const topicMatches = topic.title.toLowerCase().includes(q);
+        const matchingQuestions = topic.questions.filter(
+          (question) =>
+            question.question.toLowerCase().includes(q) ||
+            question.answer.toLowerCase().includes(q)
+        );
+
+        if (topicMatches) {
+          return topic;
+        }
+        if (matchingQuestions.length > 0) {
+          return {
+            ...topic,
+            questions: matchingQuestions,
+          };
+        }
+        return null;
+      }).filter((t): t is SpeakingTopic => t !== null);
     }
 
-    const q = searchQuery.toLowerCase().trim();
-    return SPEAKING_TOPICS.map((topic) => {
-      const topicMatches = topic.title.toLowerCase().includes(q);
-      const matchingQuestions = topic.questions.filter(
-        (question) =>
-          question.question.toLowerCase().includes(q) ||
-          question.answer.toLowerCase().includes(q)
-      );
+    if (viewMode === "topic" && selectedTopicId !== null) {
+      return SPEAKING_TOPICS.filter((t) => t.id === selectedTopicId);
+    }
 
-      if (topicMatches) {
-        return topic;
-      }
-      if (matchingQuestions.length > 0) {
-        return {
-          ...topic,
-          questions: matchingQuestions,
-        };
-      }
-      return null;
-    }).filter((t): t is SpeakingTopic => t !== null);
+    return SPEAKING_TOPICS;
   }, [searchQuery, selectedTopicId, viewMode]);
 
   // Scroll to topic section smoothly
   const scrollToTopic = (topicId: number) => {
-    if (viewMode === "all") {
-      setTimeout(() => {
-        const el = document.getElementById(`topic-section-${topicId}`);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 50);
-    }
+    setTimeout(() => {
+      const el = document.getElementById(`topic-section-${topicId}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
   };
 
   // Test voice handler
@@ -129,7 +130,6 @@ export default function SpeakingPage() {
   const playTopicQuestionAtIndex = useCallback(
     (topic: SpeakingTopic, index: number) => {
       if (index >= topic.questions.length) {
-        // Topic finished!
         stop();
         setTopicPlayState(null);
         return;
@@ -146,7 +146,6 @@ export default function SpeakingPage() {
       }
 
       playBoth(currentQ.question, currentQ.answer, audioId, () => {
-        // Automatically proceed to next question in this topic
         playTopicQuestionAtIndex(topic, index + 1);
       });
     },
@@ -200,7 +199,6 @@ export default function SpeakingPage() {
       };
     }
     if (activeAudioId) {
-      // Parse active audio ID if format: q-1-2 or a-1-2 or both-1-2
       const parts = activeAudioId.split("-");
       if (parts.length >= 3) {
         const tId = parseInt(parts[1], 10);
@@ -230,11 +228,8 @@ export default function SpeakingPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-200">
-      {/* Top Navbar */}
-      <SpeakingNavbar
-        selectedVoiceName={selectedVoice?.name}
-        isBritishVoice={selectedVoice ? isBritishVoice(selectedVoice) : true}
-      />
+      {/* Unified Top Navbar with Vocabulary & Speaking Part 1 */}
+      <Navbar activeSection="speaking" />
 
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-4 sm:space-y-6">
@@ -256,72 +251,174 @@ export default function SpeakingPage() {
           onStop={handleStopAll}
         />
 
-        {/* Topic Quick Jump Pills & View Switcher */}
-        <TopicNavPills
-          topics={SPEAKING_TOPICS}
-          selectedTopicId={selectedTopicId}
-          practicedIds={practicedIds}
-          onSelectTopic={(id) => {
-            setSelectedTopicId(id);
-          }}
-          onScrollToTopic={scrollToTopic}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-        />
-
         {/* Search Results Notice */}
-        {searchQuery && (
-          <div className="flex items-center justify-between p-3.5 rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900 text-xs text-indigo-800 dark:text-indigo-200">
-            <span>
-              Showing results for &ldquo;<strong>{searchQuery}</strong>&rdquo; across {filteredTopics.length} topic
-              {filteredTopics.length !== 1 ? "s" : ""}.
-            </span>
-            <button
-              onClick={() => setSearchQuery("")}
-              className="font-bold underline hover:no-underline ml-2"
-            >
-              Clear Search
-            </button>
-          </div>
-        )}
-
-        {/* Topic Sections List */}
-        {filteredTopics.length === 0 ? (
-          <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3">
-            <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center text-slate-400">
-              <FontAwesomeIcon icon={faComments} className="text-xl" />
+        {searchQuery ? (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between p-3.5 rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900 text-xs text-indigo-800 dark:text-indigo-200">
+              <span>
+                Showing results for &ldquo;<strong>{searchQuery}</strong>&rdquo; across {filteredTopics.length} topic
+                {filteredTopics.length !== 1 ? "s" : ""}.
+              </span>
+              <button
+                onClick={() => setSearchQuery("")}
+                className="font-bold underline hover:no-underline ml-2"
+              >
+                Clear Search
+              </button>
             </div>
-            <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">
-              No topics or questions matched your search
-            </h3>
-            <p className="text-xs text-slate-500 max-w-sm mx-auto">
-              Try searching for common IELTS themes like &ldquo;hometown&rdquo;, &ldquo;routine&rdquo;, &ldquo;travel&rdquo;, or &ldquo;music&rdquo;.
-            </p>
-            <button
-              onClick={() => setSearchQuery("")}
-              className="mt-2 px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-sm"
-            >
-              Reset Search
-            </button>
+
+            {filteredTopics.length === 0 ? (
+              <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3">
+                <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center text-slate-400">
+                  <FontAwesomeIcon icon={faComments} className="text-xl" />
+                </div>
+                <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">
+                  No topics or questions matched your search
+                </h3>
+                <p className="text-xs text-slate-500 max-w-sm mx-auto">
+                  Try searching for common themes like &ldquo;hometown&rdquo;, &ldquo;routine&rdquo;, &ldquo;travel&rdquo;, or &ldquo;music&rdquo;.
+                </p>
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="mt-2 px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-sm"
+                >
+                  Reset Search
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {filteredTopics.map((topic) => (
+                  <TopicSection
+                    key={topic.id}
+                    topic={topic}
+                    practicedIds={practicedIds}
+                    onTogglePracticed={togglePracticed}
+                    activeAudioId={activeAudioId}
+                    activePhase={activePhase}
+                    isPlaying={isPlaying}
+                    onPlaySingle={playSingle}
+                    onPlayBoth={playBoth}
+                    onStop={handleStopAll}
+                    onPlayTopicAll={handlePlayTopicAll}
+                    searchHighlight={searchQuery}
+                  />
+                ))}
+              </div>
+            )}
           </div>
+        ) : viewMode === "cards" ? (
+          /* Card-Type View: 15 Topic Cards Grid */
+          <TopicCardsGrid
+            topics={SPEAKING_TOPICS}
+            practicedIds={practicedIds}
+            onSelectTopic={(topicId) => {
+              setSelectedTopicId(topicId);
+              setViewMode("topic");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            onSelectAllTopics={() => {
+              setSelectedTopicId(null);
+              setViewMode("all");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
         ) : (
-          <div className="space-y-8">
-            {filteredTopics.map((topic) => (
-              <TopicSection
-                key={topic.id}
-                topic={topic}
-                practicedIds={practicedIds}
-                onTogglePracticed={togglePracticed}
-                activeAudioId={activeAudioId}
-                activePhase={activePhase}
-                isPlaying={isPlaying}
-                onPlaySingle={playSingle}
-                onPlayBoth={playBoth}
-                onStop={handleStopAll}
-                onPlayTopicAll={handlePlayTopicAll}
-                searchHighlight={searchQuery}
-              />
-            ))}
+          /* Topic View or All Topics View */
+          <div className="space-y-4 sm:space-y-6">
+            {/* Topic Quick Jump Pills & View Switcher */}
+            <TopicNavPills
+              topics={SPEAKING_TOPICS}
+              selectedTopicId={selectedTopicId}
+              practicedIds={practicedIds}
+              onSelectTopic={(id) => {
+                setSelectedTopicId(id);
+                if (id !== null) setViewMode("topic");
+                else setViewMode("all");
+              }}
+              onScrollToTopic={scrollToTopic}
+              viewMode={viewMode}
+              setViewMode={setViewMode}
+            />
+
+            {/* In Single Topic Focus: Top Navigation bar between topics */}
+            {viewMode === "topic" && selectedTopicId !== null && (
+              <div className="flex items-center justify-between gap-2 p-2.5 sm:p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-xs">
+                <button
+                  onClick={() => {
+                    setViewMode("cards");
+                    setSelectedTopicId(null);
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 transition active:scale-95 min-h-[36px]"
+                >
+                  <FontAwesomeIcon icon={faArrowLeft} className="text-xs" />
+                  <span>All 15 Cards</span>
+                </button>
+
+                <div className="flex items-center gap-1.5">
+                  <button
+                    disabled={selectedTopicId <= 1}
+                    onClick={() => {
+                      if (selectedTopicId > 1) {
+                        setSelectedTopicId(selectedTopicId - 1);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl font-semibold transition min-h-[36px] ${
+                      selectedTopicId <= 1
+                        ? "opacity-30 cursor-not-allowed text-slate-400"
+                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95"
+                    }`}
+                    title="Previous Topic"
+                  >
+                    <FontAwesomeIcon icon={faChevronLeft} className="text-xs" />
+                    <span className="hidden sm:inline">Prev</span>
+                  </button>
+
+                  <span className="font-bold text-slate-800 dark:text-slate-200 px-2">
+                    Topic {selectedTopicId} / 15
+                  </span>
+
+                  <button
+                    disabled={selectedTopicId >= SPEAKING_TOPICS.length}
+                    onClick={() => {
+                      if (selectedTopicId < SPEAKING_TOPICS.length) {
+                        setSelectedTopicId(selectedTopicId + 1);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl font-semibold transition min-h-[36px] ${
+                      selectedTopicId >= SPEAKING_TOPICS.length
+                        ? "opacity-30 cursor-not-allowed text-slate-400"
+                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95"
+                    }`}
+                    title="Next Topic"
+                  >
+                    <span className="hidden sm:inline">Next</span>
+                    <FontAwesomeIcon icon={faChevronRight} className="text-xs" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Display Topic Sections */}
+            <div className="space-y-6 sm:space-y-8">
+              {filteredTopics.map((topic) => (
+                <TopicSection
+                  key={topic.id}
+                  topic={topic}
+                  practicedIds={practicedIds}
+                  onTogglePracticed={togglePracticed}
+                  activeAudioId={activeAudioId}
+                  activePhase={activePhase}
+                  isPlaying={isPlaying}
+                  onPlaySingle={playSingle}
+                  onPlayBoth={playBoth}
+                  onStop={handleStopAll}
+                  onPlayTopicAll={handlePlayTopicAll}
+                  searchHighlight={searchQuery}
+                />
+              ))}
+            </div>
           </div>
         )}
 
@@ -329,7 +426,7 @@ export default function SpeakingPage() {
         <div className="flex justify-center pt-6 pb-12">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all min-h-[38px] active:scale-95"
           >
             <FontAwesomeIcon icon={faArrowUp} />
             <span>Back to Top</span>
